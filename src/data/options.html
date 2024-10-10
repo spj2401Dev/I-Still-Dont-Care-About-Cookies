@@ -1,42 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
+<html lang="en">
 
-    <style>
-      body {
-        padding: 20px;
-      }
-      label {
-        display: block;
-        width: 800px;
-        padding: 0 0 20px;
-      }
-      textarea {
-        width: 100%;
-        height: 150px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 id="title"></h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Banner Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
 
-    <label>
-      <span id="whitelist_label"></span><br />
-      <textarea id="whitelist"></textarea>
-    </label>
+<body>
+  <div class="container">
+    <h1 class="heading">Cookie Banner Settings</h1>
 
-    <label>
-      <input type="checkbox" id="status_indicators" />
-      <span id="status_indicators_label"></span>
-    </label>
+    <div class="grid">
+      <div class="card">
+        <img src="../icons/128.png" alt="Cookie Banner Settings" class="banner-image" />
+        <div class="card-header">
+          <h2 class="card-title">Manage Excluded Websites</h2>
+          <p class="card-description">
+            Add new websites or remove existing ones from the exclusion list
+          </p>
+        </div>
+        <div class="card-content">
+          <div class="form-group">
+            <label for="website">Website URLs</label> <br>
+            <textarea type="text" id="website" placeholder="https://example.com" rows="9">
+            </textarea>
+            <button class="btn" href="https://github.com/OhMyGuus/I-Still-Dont-Care-About-Cookies">Save Settings</button>
+          </div>
+        </div>
+      </div>
 
-    <input type="button" id="save" value="" style="min-width: 100px" />
-    <div
-      id="status_saved"
-      style="display: none; color: green; padding-left: 5px"
-    ></div>
+      <div class="grid-cols">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">About Us</h2>
+          </div>
+          <div class="card-content">
+            <p>
+              "I Still Don't Care About Cookies" blocks cookie pop-ups effectively and securely. After Avast acquired
+              the original extension, we created a separate, privacy-conscious version. We're constantly improving it to
+              ensure you browse without interruptions, free from corporate ownership.
+            </p>
+          </div>
+        </div>
 
-    <script src="options.js"></script>
-  </body>
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Contribute on GitHub</h2>
+          </div>
+          <div class="card-content">
+            <p>
+              The "I Still Don't Care About Cookies" extension is open source and relies on community support. If you
+              want to help us develop and maintain it, visit our GitHub page. You can contribute code, report issues, or
+              improve translations. Your input makes a difference.
+            </p>
+            <a class="btn" href="https://github.com/OhMyGuus/I-Still-Dont-Care-About-Cookies">Visit GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
